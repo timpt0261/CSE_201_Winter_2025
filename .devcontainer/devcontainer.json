@@ -1,0 +1,19 @@
+{
+	"name": "CSE 201 Devcontainer",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"donjayamanne.python-extension-pack",
+				"ms-toolsai.jupyter"
+			],
+			"settings": {
+				"dev.containers.copyGitConfig": false
+			}
+		}
+	},
+	"postCreateCommand": {
+		"pip": "pip3 install --user -r requirements.txt",
+		"git": "git remote add upstream https://github.com/Jazz23/CSE201-Homeworks-Unofficial.git && git fetch upstream main"
+	}
+}
